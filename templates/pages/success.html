@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+    <div>
+        <h3>Success! You made it!</h3>
+
+        <p>Welcome, {{ request.user.profile.fullname }}</p>
+        <p>You were born on {{ request.user.profile.birthday }}</p>
+        <p>You joined at {{ request.user.created_time }}</p>
+    </div>
+{% endblock %}

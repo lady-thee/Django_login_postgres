@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+    <div>
+        <h3>Token</h3>
+    </div>
+
+    <div>
+        <form action="" method="post">
+            {% csrf_token %}
+            <div>
+                <input type="text" placeholder="input token" name="token">
+            </div>
+            <div>
+                <button type="submit">submit</button>
+            </div>
+        </form>
+    </div>
+{% endblock %}

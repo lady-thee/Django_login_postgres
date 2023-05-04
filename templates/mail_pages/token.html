@@ -1,0 +1,48 @@
+
+{% autoescape off %} 
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <style>
+        h1{
+            color: chocolate;
+        }
+        p{
+            font-size: 22px;
+        }
+        code{
+            display: block;
+            width: 250px;
+            height: 60px;
+            margin: 0 auto;
+            background-color: bisque;
+            text-align: center;
+             padding-top: 2.5em;
+        }
+        span{
+           
+            font-size: 20px;
+            text-align: center;
+            letter-spacing: 3px;
+
+        }
+    </style>
+
+    
+</head>
+<body>
+    <h1>Hey there {{ email.profile.fullname }}, you are almost there!</h1>
+    <p>Please click link to verify your account</p>
+    <code>
+        <span>{{ token }}</span>
+    </code>
+    
+</body>
+</html>
+
+{% endautoescape %}

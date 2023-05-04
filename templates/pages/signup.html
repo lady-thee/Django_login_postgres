@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+    <div>
+        <h3>Sign Up</h3>
+    </div>
+
+    <div>
+        <form action="{% url 'signup' %}" method="post">
+            {% csrf_token %}
+            <div>
+                <input type="text" placeholder="your names" name="names" multiple>
+            </div>
+            <div>
+                <input type="email" placeholder="your email" name="email">
+            </div>
+            <div>
+                <input type="date" placeholder="your birthday" name="dob">
+            </div>
+            <div>
+                <button type="submit">submit</button>
+            </div>
+        </form>
+    </div>
+
+{% endblock %}
